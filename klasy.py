@@ -27,11 +27,26 @@ class Czlowiek:
     def przedstaw(self, osoba):
         print(f"Oto {osoba.imie}")
 
+class Dziecko(Czlowiek):
+    def baw_sie(self):
+        print("Ale zabawa, juhuu!!!!")
+    def przedstaw_sie(self):
+        print(f"Ceść, jestem {self.imie} i jestem ", end="")
+        if self.plec=="M":
+            print("chłopcem")
+        else:
+            print("dziewczynką")
+
 # Powstawanie obiektu (Instancji klasy Czlowiek)
 # (Gotowanie z przepisu)
 adam = Czlowiek("Adam", "M")
 # a = 4 # a = int(4)
 ewa = Czlowiek("Ewa", "K")
+kain = Dziecko("Kain", "M")
+ewa.przedstaw_sie()
+kain.baw_sie()
+kain.przedstaw_sie()
 
-adam.przedstaw_sie()
-ewa.przedstaw(adam)
+print(dir(Czlowiek))
+print(dir(adam))
+print(dir(kain))
