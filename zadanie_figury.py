@@ -25,13 +25,16 @@ class Prostokat(FiguraGeometryczna):
         return 2*self.a + 2*self.b
 
 class Kwadrat(Prostokat):
-    pass
+    def __init__(self, a):
+        super().__init__(a, a) # to jest jak Prostokat(a, a)
 
 class Kolo(FiguraGeometryczna):
-    pass
-
+    def __init__(self, r):
+        self.r = r
 class Trojkat(FiguraGeometryczna):
     pass
 # Stwórz instancję tej klasy i sprawdź jej działanie
 
 # +Kwadrat, Koło i Trójkąt*
+
+kwadrat = Kwadrat(3)
